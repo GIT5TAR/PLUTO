@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluto - بلوتو</title>
+    <link rel="icon" type="image/jpg" href="https://i.postimg.cc/Mp2FZFXj/20251110-235319.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #01285c, #090f11);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .music-player {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header {
+            padding: 25px 20px 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header p {
+            font-size: 15px;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+        
+        .artist-section {
+            padding: 25px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .album-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .song-info {
+            margin-bottom: 5px;
+        }
+        
+        .song-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .artist {
+            font-size: 17px;
+            opacity: 0.9;
+            font-weight: 700;
+        }
+        
+        .music-apps {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .app-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .app-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .app-info {
+            flex: 1;
+        }
+        
+        .app-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+        
+        .app-desc {
+            font-size: 14px;
+            opacity: 0.8;
+            font-weight: 600;
+        }
+        
+        .status {
+            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+        }
+        
+        .status.connected {
+            background: rgba(76, 175, 80, 0.3);
+            color: #a5d6a7;
+        }
+        
+        .status.not-connected {
+            background: rgba(244, 67, 54, 0.3);
+            color: #ef9a9a;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <div class="header">
+            <h1>GERBERTO</h1>
+            <p>ARTIST</p>
+        </div>
+        
+        <div class="artist-section">
+            <img src="https://i.postimg.cc/fTMWrBfv/a1bcff05-15d9-4299-a7cc-599e10a03e97.jpg" alt="Album Cover" class="album-image">
+            <div class="song-info">
+                <div class="song-title">PLUTO</div>
+                <div class="artist">GERBERTO</div>
+            </div>
+        </div>
+        
+        <div class="music-apps">
+            <a href="https://open.spotify.com/track/3BBddxUGjtr6b3ieJ23WEt?si=5466419be29d4c08" target="_blank" class="app-card spotify">
+                <div class="app-icon">
+                    <img src="https://i.postimg.cc/bvdNyrZw/Whats-App-Image-2025-11-22-at-8-55-42-PM-(1).jpg" alt="Spotify">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Spotify</div>
+                    <div class="app-desc">  </div>
+                </div>
+                <div class="status connected">Connected</div>
+            </a>
+            
+            <a href="https://music.apple.com/eg/album/pluto-single/1848577865" target="_blank" class="app-card apple-music">
+                <div class="app-icon">
+                    <img src="https://i.postimg.cc/QCfyd89M/Whats-App-Image-2025-11-22-at-8-55-42-PM.jpg" alt="Apple Music">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Apple Music</div>
+                    <div class="app-desc"></div>
+                </div>
+                <div class="status connected">Connected</div>
+            </a>
+            
+            <a href="https://link.deezer.com/s/31G6pfS6u7gXvSYzXS15Z" target="_blank" class="app-card deezer">
+                <div class="app-icon">
+                    <img src="https://i.postimg.cc/8CGBx8sk/Whats-App-Image-2025-11-22-at-8-55-41-PM-(1).jpg" alt="Deezer">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Deezer</div>
+                    <div class="app-desc"></div>
+                </div>
+                <div class="status connected">Connected</div>
+            </a>
+            
+            <a href="https://open.anghami.com/8XFl2aAFvYb" target="_blank" class="app-card anghami">
+                <div class="app-icon">
+                    <img src="https://i.postimg.cc/3JwqbvVX/Whats-App-Image-2025-11-22-at-8-55-41-PM.jpg" alt="Anghami">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Anghami</div>
+                    <div class="app-desc"></div>
+                </div>
+                <div class="status connected">Connected</div>
+            </a>
+            
+            <a href="https://music.amazon.com/albums/B0FXHRTW2Q?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_dqEuRBVcs2XFp6dPxwFDRPsjV" target="_blank" class="app-card amazon-music">
+                <div class="app-icon">
+                    <img src="https://i.postimg.cc/Y9h4s868/709bde81-79c1-49a4-bf64-72cf2bf01667.jpg" alt="Amazon Music">
+                </div>
+                <div class="app-info">
+                    <div class="app-name">Amazon Music</div>
+                    <div class="app-desc"></div>
+                </div>
+                <div class="status not-connected">Not Connected</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // إزالة الـ alert السابق وإضافة روابط فعلية
+        document.querySelectorAll('.app-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // الروابط تعمل تلقائياً لأنها أصبحت <a> tags
+                console.log(`Opening ${card.querySelector('.app-name').textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>
